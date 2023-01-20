@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block title %} {% endblock %}
     <link rel="icon" href="{% static '/img/favicon.png' %}" type="image/png">
-    <link rel="stylesheet" href="{% static '/css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static '/styles.min.css' %}">
   </head>
   <body>
 
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container box_1620">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="/"><img src="{% static '/img/logo.png' %}" alt="logo"></a>
+            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static '/img/logo.png' %}" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="icon-bar"></span>
@@ -28,8 +28,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="/" style="color:#3a414e">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact" style="color:#3a414e">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}" style="color:#3a414e">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" style="color:#3a414e">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right navbar-social">
                 <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -64,28 +64,22 @@
               <h6>Newsletter</h6>
               <p>Stay update with our latest</p>
               <div class="" id="mc_embed_signup">
-
                 <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                   method="get" class="form-inline">
-
                   <div class="d-flex flex-row">
-
                     <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
                       required="" type="email">
-
                     <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
                     <div style="position: absolute; left: -5000px;">
                       <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                     </div>
-
                   </div>
                   <div class="info"></div>
                 </form>
               </div>
             </div>
           </div>
-          <div class="col-lg-3  col-md-6 col-sm-6">
-          </div>
+          <div class="col-lg-3  col-md-6 col-sm-6"></div>
           <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="single-footer-widget">
               <h6>Follow Us</h6>
@@ -118,6 +112,6 @@
     </footer>
     <!--  Footer end-->
 
-    <script src="{% static '/js/scripts.js' %}"></script>
+    <script src="{% static '/scripts.js' %}"></script>
   </body>
 </html>
